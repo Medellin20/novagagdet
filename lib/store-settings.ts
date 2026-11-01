@@ -1,4 +1,5 @@
 import "server-only";
+import { paymentSettingsSchema } from "@/lib/payment-settings";
 import { hasSupabaseServerConfig } from "@/lib/supabase/env";
 import { createSupabaseAdmin } from "@/lib/supabase/admin";
 
@@ -21,4 +22,17 @@ export async function getStoreSettings(): Promise<StoreSettings> {
       supportEmail: readString("support_email", defaults.supportEmail),
     };
   } catch { return defaults; }
+}
+
+export async function getPaymentSettings() {
+  if (!hasSupabaseServerConfig()) return null;
+  try {
+    const { data, error } = await createSupabaseAdmin().from("store_settings").select("key,value").in("key", ["payment_mode", "payment_account_holder", "payment_iban", "payment_bic", "payment_url"]);
+    if (error) return null;
+    const parsed = paymentSettingsSchema.safeParse(Object.fromEntries((data ?? []).map(row => [row.key, row.value])));
+    if (!parsed.success) return null;
+    const value = parsed.data;
+    if (value.payment_mode === "rib" && (!value.payment_iban || !value.payment_bic || !value.payment_account_holder)) return null;
+    return value;
+  } catch { return null; }
 }

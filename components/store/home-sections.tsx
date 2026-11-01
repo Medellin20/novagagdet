@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, BadgeCheck, Box, Headphones, ShieldCheck, Sparkles, Truck } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BadgeCheck, Box, Headphones, ShieldCheck, Truck } from "lucide-react";
 import { ProductCard } from "@/components/store/product-card";
 import type { Product } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
@@ -14,9 +14,7 @@ export function HomeHero() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#151722] via-[#151722]/95 to-[#151722]/5" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#151722]/30 via-transparent to-transparent" />
         <div className="animate-rise relative z-10 flex h-full min-h-[450px] max-w-[520px] flex-col justify-center sm:min-h-[490px]">
-          <span className="mb-7 inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/[.07] px-3.5 py-2 text-[10px] font-semibold uppercase tracking-[.15em] text-white/75"><Sparkles size={13} className="text-[#aab2ff]" /> Sélection éditoriale · 2026</span>
-          <p className="eyebrow !text-[#b9c0ff]">La technologie, bien choisie.</p>
-          <h1 className="font-display mt-5 text-[clamp(48px,8vw,92px)] font-extrabold leading-[.94] tracking-[-.075em]">Le bon<br /><span className="text-[#aab2ff]">choix.</span><span className="text-[#ff8b6b]"> Point.</span></h1>
+          <h1 className="font-display text-[clamp(48px,8vw,92px)] font-extrabold leading-[.94] tracking-[-.075em]">Le bon<br /><span className="text-[#aab2ff]">choix.</span><span className="text-[#ff8b6b]"> Point.</span></h1>
           <p className="mt-6 max-w-[420px] text-sm leading-7 text-white/65 sm:text-base">iPhone, PlayStation et accessoires essentiels. Une sélection soignée, sans détour, à prix doux.</p>
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <Link href="/catalogue" className="focus-ring inline-flex min-h-12 items-center gap-3 rounded-full bg-brand px-6 text-sm font-bold text-white transition hover:bg-[#6072ff]">Voir la sélection <ArrowRight size={16} /></Link>

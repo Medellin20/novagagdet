@@ -44,7 +44,6 @@ export function StoreHeader({ storeName = "Nova", announcement = "La sélection 
             <kbd className="rounded border border-[#eee] px-1.5 py-0.5 text-[9px] text-[#9b9da7]">↵</kbd>
           </form>
           <div className="ml-auto flex items-center gap-3 md:ml-0">
-            <Link href="/connexion" className="hidden h-10 items-center justify-center rounded-full px-4 text-xs font-semibold text-ink transition hover:bg-white sm:inline-flex">Espace pro</Link>
             <Link href="/panier" aria-label={`Panier, ${itemCount} article${itemCount > 1 ? "s" : ""}`} className="relative flex h-11 w-11 items-center justify-center rounded-full bg-white text-ink transition hover:bg-[#eceefb]">
               <ShoppingBag size={18} strokeWidth={1.8} />
               {itemCount > 0 && <span className="absolute -right-1 -top-1 flex h-[19px] min-w-[19px] items-center justify-center rounded-full bg-brand px-1 text-[10px] font-bold text-white">{itemCount > 9 ? "9+" : itemCount}</span>}

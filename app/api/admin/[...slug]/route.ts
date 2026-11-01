@@ -3,6 +3,7 @@ import { z } from "zod";
 import { createSupabaseAdmin } from "@/lib/supabase/admin";
 import { hasSupabaseServerConfig } from "@/lib/supabase/env";
 import { getAdminUser } from "@/lib/supabase/auth";
+import { paymentSettingsSchema } from "@/lib/payment-settings";
 import { productInputSchema, promotionInputSchema } from "@/lib/validators";
 
 export const runtime = "nodejs";
@@ -132,8 +133,11 @@ async function dispatch(request: NextRequest, context: Context, method: "GET" | 
       store_name: z.string().trim().min(1).max(80),
       announcement: z.string().trim().max(180),
       support_email: z.string().trim().email().max(254),
-    }).strict().safeParse(body);
-    if (!parsed.success) return jsonError("Paramètres invalides.");
+    }).extend(paymentSettingsSchema.shape).strict().superRefine((value, context) => {
+      const payment = paymentSettingsSchema.safeParse(value);
+      if (!payment.success) for (const issue of payment.error.issues) context.addIssue({ code: "custom", path: issue.path, message: issue.message });
+    }).safeParse(body);
+    if (!parsed.success) return jsonError(parsed.error.issues[0]?.message ?? "Paramètres invalides.");
     const values = Object.entries(parsed.data).map(([key, value]) => ({ key, value, updated_at: new Date().toISOString() }));
     const { error } = await supabase.from("store_settings").upsert(values, { onConflict: "key" });
     return error ? jsonError("Les paramètres n’ont pas pu être enregistrés.", 500) : jsonOk({ saved: values.length });
