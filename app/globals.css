@@ -26,8 +26,6 @@ a { color: inherit; text-decoration: none; }
 .page-shell { width: min(100% - 48px, 1440px); margin-inline: auto; }
 .section-space { padding-block: clamp(64px, 8vw, 112px); }
 .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #555b70; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
-.eyebrow::before { display: block; width: 22px; height: 1px; background: #4f63f7; content: ""; }
-.admin-area .eyebrow::before { display: none; }
 .card-lift { transition: transform .26s cubic-bezier(.2,.75,.25,1), box-shadow .26s ease; }
 .card-lift:hover { transform: translateY(-5px); box-shadow: 0 22px 50px rgba(20, 24, 40, .09); }
 .focus-ring:focus-visible { outline: 3px solid rgba(79,99,247,.34); outline-offset: 3px; }
