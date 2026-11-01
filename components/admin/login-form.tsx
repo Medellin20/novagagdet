@@ -24,7 +24,7 @@ export function LoginForm({ configured, notice = "" }: { configured: boolean; no
     finally { setLoading(false); }
   }
 
-  return <div className="mx-auto w-full max-w-[460px] rounded-[26px] border border-black/[.045] bg-white p-7 shadow-[0_24px_80px_rgba(25,30,60,.08)] sm:p-10">
+  return <div className="admin-area mx-auto w-full max-w-[460px] rounded-[26px] border border-black/[.045] bg-white p-7 shadow-[0_24px_80px_rgba(25,30,60,.08)] sm:p-10">
     <NovaMark/><div className="mt-9 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#eff0ff] text-brand"><LockKeyhole size={19}/></div>
     <p className="eyebrow admin-eyebrow mt-6">Espace sécurisé</p><h1 className="font-display mt-2 text-3xl font-extrabold tracking-[-.06em]">Connexion admin.</h1><p className="mt-2 text-sm leading-6 text-muted">Accédez au pilotage de votre boutique Nova.</p>
     {error && <div role="alert" className="mt-5 rounded-xl border border-[#efceca] bg-[#fff3f1] p-3.5 text-xs leading-5 text-[#9d4941]">{error}</div>}
