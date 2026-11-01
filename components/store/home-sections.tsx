@@ -4,9 +4,7 @@ import { ProductCard } from "@/components/store/product-card";
 import type { Product } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 
-const heroImage = process.env.NETLIFY
-  ? "/images/hero-nova.webp"
-  : "/manus-storage/async-images/ewKaDlVusLoEQ9CsGqJoce/image-1.webp";
+const heroImage = "/images/hero-nova.webp";
 
 export function HomeHero() {
   return (
