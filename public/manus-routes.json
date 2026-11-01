@@ -1,0 +1,16 @@
+{
+  "routes": [
+    { "path": "/", "title": "Accueil — Nova" },
+    { "path": "/catalogue", "title": "Catalogue — Nova" },
+    { "path": "/produit/:slug", "title": "Fiche produit — Nova" },
+    { "path": "/panier", "title": "Panier — Nova" },
+    { "path": "/commande", "title": "Commande — Nova" },
+    { "path": "/connexion", "title": "Connexion administrateur — Nova" },
+    { "path": "/admin", "title": "Dashboard — Nova" },
+    { "path": "/admin/produits", "title": "Produits — Nova" },
+    { "path": "/admin/commandes", "title": "Commandes — Nova" },
+    { "path": "/admin/clients", "title": "Clients — Nova" },
+    { "path": "/admin/promotions", "title": "Promotions — Nova" },
+    { "path": "/admin/parametres", "title": "Paramètres — Nova" }
+  ]
+}

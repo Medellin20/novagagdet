@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+build/
+next-env.d.ts
+*.tsbuildinfo
+
+# Local environment files
+.env*
+!.env.example
+
+# Deployment
+.vercel/
+
+# Supabase local development
+supabase/.branches/
+supabase/.temp/
+
+# Logs
+*.log
+pnpm-debug.log*
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
