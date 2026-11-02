@@ -22,7 +22,7 @@ export const demoProducts: Product[] = [
   {
     id: "demo-dualsense", slug: "manette-dualsense", name: "Manette DualSense", subtitle: "Midnight Black · PS5",
     description: "Ressentez l’action grâce au retour haptique, aux gâchettes adaptatives et à une prise en main confortable.",
-    price: 74.99, compareAtPrice: 79.99, imageUrl: "/images/dualsense-black.jpg", categorySlug: "accessoires", categoryName: "Accessoires", featured: true, stock: 21, badge: null,
+    price: 74.99, compareAtPrice: 79.99, imageUrl: "/images/dualsense-black.jpg", categorySlug: "accessoires", categoryName: "Accessoires & Jeux", featured: true, stock: 21, badge: null,
     variants: [{ id: "demo-pad-black", name: "Coloris", value: "Midnight Black", priceDelta: 0, stock: 12 }, { id: "demo-pad-white", name: "Coloris", value: "Blanc", priceDelta: 0, stock: 9 }],
   },
   {
@@ -34,7 +34,7 @@ export const demoProducts: Product[] = [
   {
     id: "demo-charger", slug: "adaptateur-usb-c-20w", name: "Adaptateur USB-C 20 W", subtitle: "Compact · Charge rapide",
     description: "Un adaptateur secteur compact pour recharger rapidement les appareils compatibles, à la maison comme en déplacement.",
-    price: 25.99, compareAtPrice: null, imageUrl: "/images/iphone-charger.jpg", categorySlug: "accessoires", categoryName: "Accessoires", featured: false, stock: 34, badge: null,
+    price: 25.99, compareAtPrice: null, imageUrl: "/images/iphone-charger.jpg", categorySlug: "accessoires", categoryName: "Accessoires & Jeux", featured: false, stock: 34, badge: null,
     variants: [{ id: "demo-charger-white", name: "Coloris", value: "Blanc", priceDelta: 0, stock: 34 }],
   },
 ];

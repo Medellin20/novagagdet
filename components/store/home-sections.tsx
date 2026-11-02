@@ -15,7 +15,7 @@ export function HomeHero() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#151722]/30 via-transparent to-transparent" />
         <div className="animate-rise relative z-10 flex h-full min-h-[450px] max-w-[520px] flex-col justify-center sm:min-h-[490px]">
           <h1 className="font-display text-[clamp(48px,8vw,92px)] font-extrabold leading-[.94] tracking-[-.075em]">Le bon<br /><span className="text-[#aab2ff]">choix.</span><span className="text-[#ff8b6b]"> Point.</span></h1>
-          <p className="mt-6 max-w-[420px] text-sm leading-7 text-white/65 sm:text-base">iPhone, PlayStation et accessoires essentiels. Une sélection soignée, sans détour, à prix doux.</p>
+          <p className="mt-6 max-w-[420px] text-sm leading-7 text-white/65 sm:text-base">iPhone, PlayStation, accessoires et jeux. Une sélection soignée, sans détour, à prix doux.</p>
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <Link href="/catalogue" className="focus-ring inline-flex min-h-12 items-center gap-3 rounded-full bg-brand px-6 text-sm font-bold text-white transition hover:bg-[#6072ff]">Voir la sélection <ArrowRight size={16} /></Link>
             <span className="inline-flex items-center gap-2 px-2 text-xs font-medium text-white/60"><ShieldCheck size={16} /> Achat en toute clarté</span>
@@ -44,7 +44,7 @@ export function CategoryShowcase() {
   const categories = [
     { name: "iPhone", label: "Pensé pour suivre votre rythme.", slug: "smartphones", number: "01", icon: "01" },
     { name: "PlayStation", label: "Le jeu prend une autre dimension.", slug: "consoles", number: "02", icon: "02" },
-    { name: "Accessoires", label: "Les bons détails, au quotidien.", slug: "accessoires", number: "03", icon: "03" },
+    { name: "Accessoires & Jeux", label: "Les accessoires essentiels et vos jeux préférés.", slug: "accessoires", number: "03", icon: "03" },
   ];
   return <section className="page-shell section-space pb-8">
     <div className="mb-8 flex flex-wrap items-end justify-between gap-4"><div><p className="eyebrow">Les univers Nova</p><h2 className="font-display mt-3 text-3xl font-extrabold tracking-[-.055em] sm:text-[40px]">À chacun son essentiel.</h2></div><Link href="/catalogue" className="inline-flex items-center gap-2 text-xs font-bold text-ink transition hover:text-brand">Explorer le catalogue <ArrowUpRight size={15} /></Link></div>

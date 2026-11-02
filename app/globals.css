@@ -21,6 +21,7 @@ body { margin: 0; background: #f7f7f5; color: #171923; font-family: "Inter Varia
 button, input, select, textarea { font: inherit; }
 a { color: inherit; text-decoration: none; }
 ::selection { background: rgba(79, 99, 247, .18); }
+#nova-translate select { width: 100%; max-width: 100%; border: 1px solid #e9e9e6; border-radius: 8px; padding: 8px; background: white; color: #171923; font-size: 13px; }
 
 .font-display { font-family: "Manrope Variable", Manrope, ui-sans-serif, system-ui, sans-serif; }
 .page-shell { width: min(100% - 48px, 1440px); margin-inline: auto; }

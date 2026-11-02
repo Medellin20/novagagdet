@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CatalogBrowser } from "@/components/store/catalog-browser";
 import { getProducts } from "@/lib/catalog";
 
-export const metadata: Metadata = { title: "Catalogue", description: "Parcourez la sélection iPhone, PlayStation et accessoires Nova." };
+export const metadata: Metadata = { title: "Catalogue", description: "Parcourez la sélection iPhone, PlayStation, accessoires et jeux Nova." };
 type SearchParams = Promise<{ q?: string; categorie?: string; offres?: string }>;
 
 export default async function CataloguePage({ searchParams }: { searchParams: SearchParams }) {

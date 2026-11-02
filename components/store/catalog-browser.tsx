@@ -1,11 +1,13 @@
 "use client";
 
+import { productCategories } from "@/lib/categories";
+
 import { useMemo, useState } from "react";
 import { Search, SlidersHorizontal, X } from "lucide-react";
 import { ProductCard } from "@/components/store/product-card";
 import type { Product } from "@/lib/types";
 
-const categories = [{ slug: "tous", name: "Tout voir" }, { slug: "smartphones", name: "iPhone" }, { slug: "consoles", name: "Consoles" }, { slug: "audio", name: "Audio" }, { slug: "accessoires", name: "Accessoires" }];
+const categories = [{ slug: "tous", name: "Tout voir" }, ...productCategories];
 
 export function CatalogBrowser({ products, initialQuery = "", initialCategory = "tous", offersOnly = false }: { products: Product[]; initialQuery?: string; initialCategory?: string; offersOnly?: boolean }) {
   const [query, setQuery] = useState(initialQuery);
